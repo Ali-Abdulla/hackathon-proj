@@ -1,0 +1,2 @@
+# hackaton-proj
+Kyiv ETH
