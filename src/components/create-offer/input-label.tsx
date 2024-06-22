@@ -7,17 +7,29 @@ interface InputLabelProps {
 
 const InputLabel = (props: InputLabelProps) => {
     return (
-        <div className="input-container-upper-text" style={{width: '55ch', height: '7ch'}}>
-            <Stack gap={1}>
-                <label>
-                    {props.upperText}
-
-                </label>
-                <input type="text" placeholder={props.labelText} style={{
-                    width: '55ch', height: '7ch', borderRadius: '10px', borderWidth: '1px', borderColor: '#D1D5DB',
-                    boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.05)'
+        <div
+            style={{
+                width: '450px',
+                height: '66px',
+                fontSize: '14px',
+            }}>
+            <label>
+                {props.upperText}
+            </label>
+            <input
+                type="text"
+                placeholder={props.labelText}
+                style={{
+                    width: '450px',
+                    height: '42px',
+                    borderRadius: '10px',
+                    borderWidth: '1px',
+                    borderColor: '#D1D5DB',
+                    paddingLeft: '8px',
+                    marginTop: '8px',
+                    boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.05)',
+                    fontSize: '16px',
                 }}/>
-            </Stack>
         </div>
 
     )
