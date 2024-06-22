@@ -1,35 +1,35 @@
 header {
-    background-color: #f8f9fa;
-    padding: 2ch;
+  background-color: #f8f9fa;
+  padding: 2ch;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-item {
-    margin: 0 1ch;
-    color: #0b4bbf;
-    font-size: 2rem;
-    text-decoration: none;
+  margin: 0 1ch;
+  color: #0b4bbf;
+  font-size: 2rem;
+  text-decoration: none;
 }
 
 .Button-container {
-    align-self: stretch;
-    width: 406ch;
-    height: 79ch;
-    padding-left: 17ch;
-    padding-right: 17ch;
-    padding-top: 9ch;
-    padding-bottom: 9ch;
-    background: #C7D2FE;
-    border-radius: 16ch;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    display: inline-flex;
+  align-self: stretch;
+  width: 406ch;
+  height: 79ch;
+  padding-left: 17ch;
+  padding-right: 17ch;
+  padding-top: 9ch;
+  padding-bottom: 9ch;
+  background: #C7D2FE;
+  border-radius: 16ch;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
 }
 
 .app-background {
@@ -66,4 +66,46 @@ header {
   font-weight: 500;
   line-height: 24px;
   word-wrap: break-word;
+}
+
+/* Labels */
+
+.label16 {
+  font-size: 16px;
+  font-family: Lato;
+  font-weight: 400;
+  line-height: 20px;
+  word-wrap: break-word
+}
+
+.label16Bold {
+  font-size: 16px;
+  font-family: Lato;
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word
+}
+
+.label18 {
+  font-size: 18px;
+  font-family: Lato;
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word
+}
+
+.label20 {
+  font-size: 20px;
+  font-family: Lato;
+  font-weight: 600;
+  line-height: 28px;
+  word-wrap: break-word
+}
+
+.label30 {
+  font-size: 30px;
+  font-family: Lato;
+  font-weight: 600;
+  line-height: 36px;
+  word-wrap: break-word
 }
