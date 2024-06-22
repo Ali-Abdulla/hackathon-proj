@@ -1,3 +1,4 @@
+import { Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 interface CardProps {
@@ -10,9 +11,12 @@ export function Card({ text, navigation }: CardProps) {
 
   return (
     <button className="card" onClick={() => navigate('../' + navigation)}>
-      <div className="card-text">
+      <Stack direction='row' gap={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
+      <p className="card-text">
         {text}
-      </div>
+      </p>
+      <img src="diia.svg" alt="diia" style={{width: '5ch', height: '5ch'}}/>
+      </Stack>
     </button>
   );
 }
