@@ -1,20 +1,16 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Container } from './components/LargeButton';
-import { Stack } from '@mui/material';
-import { Header } from './components/choose-role/Header';
-import { Card } from './components/choose-role/Card';
+import ChooseRole from './views/Choose-role';
+import AuthoriseDiia from './views/Authorise-diia';
 
 function App() {
   return (
-    <div className="app-background">
-      <Container>
-      <Header />
-      <Stack spacing={3}>
-        <Card text="Я отримую послугу" />
-        <Card text="Я надаю послугу" />
-      </Stack>
-    </Container>
-    </div>
+    <Router>
+        <Routes>
+          <Route path="choose-role" element={<ChooseRole/>}/>
+          <Route path="authorise-diia" element={<AuthoriseDiia/>}/>
+        </Routes>
+    </Router>
   );
 }
 
