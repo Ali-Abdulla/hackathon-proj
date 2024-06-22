@@ -5,8 +5,11 @@ import { HStack } from '../HStack';
 import { Label16, Label16Bold, Label20 } from '../labels';
 import { Stack } from '@mui/material';
 import { ButtonSmall } from '../buttons';
+import { useNavigate } from 'react-router-dom';
 
 const OffersList: React.FC = () => {
+    const navigate = useNavigate();
+    
     const [offers, setOffers] = useState<OfferEntity[]>([]);
 
     useEffect(() => {
@@ -49,7 +52,7 @@ const OffersList: React.FC = () => {
     return (
         <div>
             {offers.map(offer => (
-                <div style={{ background: 'white', padding: '2ch', marginBottom: '2ch', borderRadius: '1ch' }}>
+                <div onClick={() => navigate('offer/' + offer.id) } style={{ background: 'white', padding: '2ch', marginBottom: '2ch', borderRadius: '1ch' }}>
                     <Stack gap={3}>
                     <HStack>
                         <div style={{ marginRight: 'auto' }}>
