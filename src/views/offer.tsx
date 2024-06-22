@@ -1,6 +1,10 @@
 import Header from '../components/header';
 
-const Offer = () => {
+interface OfferProps {
+    id: string;
+}
+
+const Offer = (props: OfferProps) => {
     return (
         <div>
             <Header />

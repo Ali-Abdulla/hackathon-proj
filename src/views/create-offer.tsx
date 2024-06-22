@@ -12,7 +12,6 @@ const CreateOffer = () => {
                 <HStack>
                     <div style={{marginRight: 'auto'}}>
                         <Label30 text='Створити оферту'/>
-
                     </div>
                 </HStack>
                 <div style={{marginTop: '3ch'}}>

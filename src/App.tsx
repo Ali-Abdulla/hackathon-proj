@@ -14,7 +14,7 @@ function App() {
                 <Route path="/" element={<MyOffers/>}/> 
                 <Route path="create-offer" element={<CreateOffer/>}/>
                 <Route path="create-service" element={<CreateService/>}/>
-                <Route path="offer" element={<Offer/>}/>
+                <Route path="offer/:id" element={<Offer id={"1"}/>}/>
                 <Route path="choose-role" element={<ChooseRole/>}/>
                 <Route path="authorise-diia" element={<AuthoriseDiia/>}/>
             </Routes>
