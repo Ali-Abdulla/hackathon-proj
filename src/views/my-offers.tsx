@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { HStack } from '../components/HStack';
 import { ButtonSmall, ButtonSmallSecondary } from '../components/buttons';
 import Header from '../components/header';
@@ -5,6 +6,8 @@ import { Label16Bold, Label30 } from '../components/labels';
 import OffersList from '../components/my-offers/offers-list';
 
 const MyOffers = () => {
+    const navigate = useNavigate();
+
     return (
         <div style={{background: '#F9FAFB'}}>
             <Header />
@@ -13,7 +16,7 @@ const MyOffers = () => {
                     <div style={{ marginRight: 'auto' }}>
                         <Label30 text='Мої оферти' />
                     </div>
-                    <div style={{marginRight: '1ch'}}>
+                    <div onClick={ () => navigate('create-offer') } style={{marginRight: '1ch'}}>
                     <ButtonSmall>
                         <div style={{color: 'white'}}>
                         <Label16Bold text='Створити оферту' />

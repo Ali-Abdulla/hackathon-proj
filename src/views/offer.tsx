@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Header from '../components/header';
 import { HStack } from '../components/HStack';
 import { Label14, Label16Bold, Label24, Label30 } from '../components/labels';
@@ -18,6 +18,7 @@ enum ServiceOption {
 
 const Offer = () => {
     let { id } = useParams();
+    const navigate = useNavigate();
 
     const [offer, setOffer] = useState<OfferEntity | undefined>(undefined);
     const [services, setServices] = useState<Service[]>([]);
@@ -122,7 +123,7 @@ const Offer = () => {
                                     <Label24 text={servicesTitle} />
                                     <div style={{ marginLeft: 'auto' }}>
                                         <ButtonSmall>
-                                            <div style={{ color: 'white' }}>
+                                            <div onClick={ () => navigate('../create-service') } style={{ color: 'white' }}>
                                                 <Label16Bold text="Створити послугу" />
                                             </div>
                                         </ButtonSmall>
