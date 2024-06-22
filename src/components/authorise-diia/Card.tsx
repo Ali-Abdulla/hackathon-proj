@@ -10,7 +10,7 @@ export function Card({ text, navigation }: CardProps) {
   const navigate = useNavigate();
 
   return (
-    <button className="card" onClick={() => navigate('../' + navigation)}>
+    <button className="card" onClick={() => navigate(navigation)}>
       <Stack direction='row' gap={1} sx={{justifyContent: 'center', alignItems: 'center'}}>
       <p className="card-text">
         {text}
