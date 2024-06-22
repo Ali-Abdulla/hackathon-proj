@@ -6,6 +6,8 @@ header {
 }
 
 .header-container {
+  color: #ffffff;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,8 +15,7 @@ header {
 
 .header-item {
   margin: 0 1ch;
-  color: #0b4bbf;
-  font-size: 2rem;
+  color: #000000;
   text-decoration: none;
 }
 
