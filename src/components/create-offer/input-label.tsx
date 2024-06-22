@@ -7,14 +7,16 @@ interface InputLabelProps {
 
 const InputLabel = (props: InputLabelProps) => {
     return (
-        <Stack>
-            <label className="input-container-upper-text">
-                {props.upperText}
-            </label>
-            <input className="input-container-label">
-                {props.labelText}
-            </input>
-        </Stack>
+        <div>
+            <div className="input-container-label-upper">
+                <label>
+                    {props.upperText}
+                </label>
+            </div>
+            <div className="input-container-label">
+                <input type="text" placeholder={props.labelText}/>
+            </div>
+        </div>
     )
 }
 

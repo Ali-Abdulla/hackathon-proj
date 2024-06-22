@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600&display=swap');
+
 header {
   background-color: #f8f9fa;
   padding: 2ch;
@@ -62,7 +64,7 @@ header {
 .card-text {
   color: #075985;
   font-size: 16px;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   line-height: 24px;
   word-wrap: break-word;
@@ -70,7 +72,7 @@ header {
 
 .input-container-upper-text {
     font-size: 14px;
-    font-family: Lato;
+    font-family: "Lato", sans-serif;
     font-weight: 500;
     line-height: 20px;
     width: 12ch;
@@ -84,7 +86,7 @@ header {
 
 .label16 {
   font-size: 16px;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 20px;
   word-wrap: break-word
@@ -92,7 +94,7 @@ header {
 
 .label16Bold {
   font-size: 16px;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   line-height: 24px;
   word-wrap: break-word
@@ -100,23 +102,23 @@ header {
 
 .label18 {
   font-size: 18px;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   line-height: 24px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 .label20 {
   font-size: 20px;
-  font-family: Lato;
+  font-family: "Lato" , sans-serif;
   font-weight: 600;
   line-height: 28px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 .label30 {
   font-size: 30px;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   line-height: 36px;
   word-wrap: break-word;
