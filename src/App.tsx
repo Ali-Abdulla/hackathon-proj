@@ -5,13 +5,15 @@ import { Card, Container, FlexColumn, Header } from './components/LargeButton';
 
 function App() {
   return (
-    <Container>
+    <div className="app-background">
+      <Container>
       <Header />
       <FlexColumn>
         <Card text="Я надаю послугу" />
         <Card text="Я отримую послугу" />
       </FlexColumn>
     </Container>
+    </div>
   );
 }
 
