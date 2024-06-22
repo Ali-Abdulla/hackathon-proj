@@ -75,8 +75,8 @@ header {
     font-family: "Lato", sans-serif;
     font-weight: 500;
     line-height: 20px;
-    width: 12ch;
-    height: 2.5ch;
+    /*width: 96px;*/
+    /*height: 20px;*/
 }
 
 .input-container {

@@ -12,11 +12,13 @@ const CreateOffer = () => {
                 <HStack>
                     <div style={{marginRight: 'auto'}}>
                         <Label30 text='Створити оферту'/>
-                        <HStack>
-                            <InputLabel upperText={'Назва компанії'} labelText={'Назва компанії'}/>
-                        </HStack>
+
                     </div>
                 </HStack>
+                <div style={{marginTop: '3ch'}}>
+                    <InputLabel upperText={'Назва компанії'} labelText={'Назва компанії'}/>
+
+                </div>
             </div>
         </div>
     )
