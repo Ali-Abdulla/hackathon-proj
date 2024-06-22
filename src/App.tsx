@@ -1,17 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Card, Container, FlexColumn, Header } from './components/LargeButton';
+import { Container } from './components/LargeButton';
+import { Stack } from '@mui/material';
+import { Header } from './components/choose-role/Header';
+import { Card } from './components/choose-role/Card';
 
 function App() {
   return (
     <div className="app-background">
       <Container>
       <Header />
-      <FlexColumn>
-        <Card text="Я надаю послугу" />
+      <Stack spacing={3}>
         <Card text="Я отримую послугу" />
-      </FlexColumn>
+        <Card text="Я надаю послугу" />
+      </Stack>
     </Container>
     </div>
   );
