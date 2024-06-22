@@ -9,8 +9,8 @@ const ChooseRole: React.FC = () => {
       <Container>
       <Header />
       <Stack spacing={3}>
-        <Card text="Я отримую послугу" navigation="authorise-diia" />
-        <Card text="Я надаю послугу" navigation="error"/>
+        <Card text="Я отримую послугу" navigation="../authorise-diia" />
+        <Card text="Я надаю послугу" navigation="../error"/>
       </Stack>
     </Container>
     </div>
