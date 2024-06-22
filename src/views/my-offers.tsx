@@ -8,8 +8,9 @@ const MyOffers = () => {
             <Header />
             <div style={{paddingTop: '3ch', paddingLeft: '15ch', paddingRight: '15ch', paddingBottom: '3ch'}}>
             <HStack>
+                <div style={{marginRight: 'auto'}}>
                 <Label30 text='Мої оферти'/>
-                <div></div>
+                </div>
                 <button>
                 <Label16Bold text='Створити оферту'/>
                 </button>
