@@ -1,13 +1,20 @@
+import {Label16} from "./labels";
+
+
 const Header = () => {
     return (
-        <header className="header-container">
-            <a className="header-item">Hackathon Proj</a>
-            <nav>
-                <a className="header-item" href="#">My Offers</a>
-                <a className="header-item" href="create-offer">Create Offer</a>
-                <a className="header-item" href="offer">Offer</a>
-                <a className="header-item" href="create-service">Create Service</a>
-            </nav>
+        <header className="header-container" style={{height: '64px'}}>
+            <a className="header-item">
+                <img src="logo.svg" alt="logo"/>
+            </a>
+            <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                <a className="header-item">
+                    <Label16 text={"ФОП Буданов"}/>
+                </a>
+                <a className="header-item">
+                    <img src="face.svg" alt="face"/>
+                </a>
+            </div>
         </header>
     )
 }

@@ -14,7 +14,7 @@ const CreateOffer = () => {
             <div style={{paddingTop: '3ch', paddingLeft: '15ch', paddingRight: '15ch', paddingBottom: '3ch'}}>
                 <HStack>
                     <button onClick={() => navigate('../')} style={{backgroundColor: 'white', border: '0'}}>
-                        <img src="close.svg" alt="buttonpng"/>
+                        <img src="arrow-left.svg" alt="buttonpng"/>
                     </button>
                     <Label30 text='Створення оферти'/>
                 </HStack>
