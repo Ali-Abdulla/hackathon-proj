@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Offer from '../../types/offer';
+import OfferEntity from '../../types/offer';
 import { HStack } from '../HStack';
 import { Label16, Label16Bold, Label20 } from '../labels';
 import { Stack } from '@mui/material';
 import { ButtonSmall } from '../buttons';
 
 const OffersList: React.FC = () => {
-    const [offers, setOffers] = useState<Offer[]>([]);
+    const [offers, setOffers] = useState<OfferEntity[]>([]);
 
     useEffect(() => {
         // Fetch the items from the API
