@@ -1,23 +1,34 @@
 import { HStack } from '../components/HStack';
+import { ButtonSmall, ButtonSmallSecondary } from '../components/buttons';
 import Header from '../components/header';
 import { Label16Bold, Label30 } from '../components/labels';
+import OffersList from '../components/my-offers/offers-list';
 
 const MyOffers = () => {
     return (
-        <div>
+        <div style={{background: '#F9FAFB'}}>
             <Header />
-            <div style={{paddingTop: '3ch', paddingLeft: '15ch', paddingRight: '15ch', paddingBottom: '3ch'}}>
-            <HStack>
-                <div style={{marginRight: 'auto'}}>
-                <Label30 text='Мої оферти'/>
+            <div style={{ paddingTop: '3ch', paddingLeft: '15ch', paddingRight: '15ch', paddingBottom: '3ch' }}>
+                <HStack>
+                    <div style={{ marginRight: 'auto' }}>
+                        <Label30 text='Мої оферти' />
+                    </div>
+                    <div style={{marginRight: '1ch'}}>
+                    <ButtonSmall>
+                        <div style={{color: 'white'}}>
+                        <Label16Bold text='Створити оферту' />
+                        </div>
+                    </ButtonSmall>
+                    </div>
+                    <ButtonSmallSecondary>
+                    <div style={{color: '#0C4A6E'}}>
+                    <Label16Bold text='Додати оферту' />
+                    </div>
+                    </ButtonSmallSecondary>
+                </HStack>
+                <div style={{marginTop: '3ch'}}>
+                <OffersList></OffersList>
                 </div>
-                <button>
-                <Label16Bold text='Створити оферту'/>
-                </button>
-                <button>
-                <Label16Bold text='Додати оферту'/>
-                </button>
-            </HStack>
             </div>
         </div>
     )
