@@ -97,22 +97,7 @@ interface CardProps {
 
 export function Card({ text }: CardProps) {
   return (
-    <button style={{
-      alignSelf: 'stretch',
-      width: '406px',
-      height: '79px',
-      paddingLeft: '17px',
-      paddingRight: '17px',
-      paddingTop: '9px',
-      paddingBottom: '9px',
-      background: '#C7D2FE',
-      boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.05)',
-      borderRadius: '16px',
-      overflow: 'hidden',
-      justifyContent: 'center',
-      alignItems: 'center',
-      display: 'inline-flex',
-    }} onClick={() => console.log('Clicked')}>
+    <button className="buttonStyle" onClick={() => console.log('Clicked')}>
       <div style={{
         color: '#075985',
         fontSize: '16px',
