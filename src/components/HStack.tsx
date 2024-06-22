@@ -6,7 +6,7 @@ interface HStackProps {
 
 export function HStack({ children }: HStackProps) {
     return (
-        <Stack direction='row'>
+        <Stack direction='row' style={{alignItems: 'center'}}>
             {children}
         </Stack>
     );

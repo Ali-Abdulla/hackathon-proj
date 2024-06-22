@@ -70,6 +70,28 @@ header {
   word-wrap: break-word;
 }
 
+.input-container-upper-text {
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    line-height: 20px;
+    /*width: 96px;*/
+    /*height: 20px;*/
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label14 {
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  word-wrap: break-word
+}
+
 .label16 {
   font-size: 16px;
   font-family: "Lato", sans-serif;
@@ -99,6 +121,14 @@ header {
   font-family: "Lato" , sans-serif;
   font-weight: 600;
   line-height: 28px;
+  word-wrap: break-word;
+}
+
+.label24 {
+  font-size: 24px;
+  font-family: "Lato" , sans-serif;
+  font-weight: 500;
+  line-height: 36px;
   word-wrap: break-word;
 }
 

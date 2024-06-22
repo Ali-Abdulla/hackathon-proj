@@ -1,4 +1,4 @@
-interface Offer {
+interface OfferEntity {
     id: string;
     companyName: string;
     identificationCode: string;
@@ -8,4 +8,4 @@ interface Offer {
     serviceType: string;
 }
 
-export default Offer;
+export default OfferEntity;
