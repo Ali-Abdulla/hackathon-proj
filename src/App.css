@@ -67,3 +67,18 @@ header {
   line-height: 24px;
   word-wrap: break-word;
 }
+
+.input-container-upper-text {
+    font-size: 14px;
+    font-family: Lato;
+    font-weight: 500;
+    line-height: 20px;
+    width: 12ch;
+    height: 2.5ch;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+
+}

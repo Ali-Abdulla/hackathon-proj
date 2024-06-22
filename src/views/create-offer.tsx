@@ -4,7 +4,8 @@ const CreateOffer = () => {
     return (
         <div>
             <Header />
-            <p>Create offer</p>
+            <p >Create offer</p>
+
         </div>
     )
 }
