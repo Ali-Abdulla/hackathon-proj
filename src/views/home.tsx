@@ -26,7 +26,7 @@ const Home = () => {
 
                 <br/>
                 <button
-                    onClick={() => navigate('my-offers')}
+                    onClick={() => navigate('../')}
                     style={{
                         backgroundColor: '#1D4ED8',
                         borderWidth: '1px',

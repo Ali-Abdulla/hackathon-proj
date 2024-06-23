@@ -14,8 +14,8 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="my-offers" element={<MyOffers/>}/>
+                <Route path="home" element={<Home/>}/>
+                <Route path="/" element={<MyOffers/>}/>
                 <Route path="create-offer" element={<CreateOffer/>}/>
                 <Route path="create-service" element={<CreateService/>}/>
                 <Route path="offer/:id" element={<Offer/>}/>
