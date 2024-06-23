@@ -18,25 +18,25 @@ const MyOffers = () => {
             <div style={{ paddingTop: '3ch', paddingLeft: '15ch', paddingRight: '15ch', paddingBottom: '3ch' }}>
                 <HStack>
                     <div style={{ marginRight: 'auto' }}>
-                        <Label30 text='Мої оферти' />
+                        <Label30 text='My offers' />
                     </div>
                     <div onClick={handleDeploy} style={{marginRight: '1ch'}}>
                     <ButtonSmall>
                         <div style={{color: 'white'}}>
-                        <Label16Bold text='Задеплоїти смартконтракт' />
+                        <Label16Bold text='Deploy smart contract' />
                         </div>
                     </ButtonSmall>
                     </div>
                     <div onClick={ () => navigate('create-offer') } style={{marginRight: '1ch'}}>
                     <ButtonSmall>
                         <div style={{color: 'white'}}>
-                        <Label16Bold text='Створити оферту' />
+                        <Label16Bold text='Create offer' />
                         </div>
                     </ButtonSmall>
                     </div>
                     <ButtonSmallSecondary>
                     <div style={{color: '#0C4A6E'}}>
-                    <Label16Bold text='Додати оферту' />
+                    <Label16Bold text='Add offer' />
                     </div>
                     </ButtonSmallSecondary>
                 </HStack>

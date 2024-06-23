@@ -13,7 +13,8 @@ const Home = () => {
     return (
         <div>
             <Header/>
-            <div style={{paddingTop: '3ch', paddingLeft: '15ch', paddingRight: '15ch', paddingBottom: '3ch'}}>
+            <div style={{paddingTop: '3ch', paddingLeft: '15ch', paddingRight: '15ch', paddingBottom: '3ch', alignItems: 'center'}}>
+
                 <HStack>
                     <Label48 text='Smart Contracts'/>
                 </HStack>
