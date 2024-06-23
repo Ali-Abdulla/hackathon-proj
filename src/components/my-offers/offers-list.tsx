@@ -6,6 +6,7 @@ import { Label16, Label16Bold, Label20 } from '../labels';
 import { Stack } from '@mui/material';
 import { ButtonSmall } from '../buttons';
 import { useNavigate } from 'react-router-dom';
+import OfferDatabase from '../../database/offer-database';
 
 const OffersList: React.FC = () => {
     const navigate = useNavigate();
@@ -15,35 +16,7 @@ const OffersList: React.FC = () => {
     useEffect(() => {
         // Fetch the items from the API
         const fetchOffers = async () => {
-            setOffers([
-                {
-                    id: "1",
-                    companyName: "ФОП Буданов",
-                    identificationCode: "Code 1",
-                    currency: "UAH",
-                    amount: 100,
-                    phoneNumber: "0501234567",
-                    serviceType: "Послуги розвідки",
-                },
-                {
-                    id: "2",
-                    companyName: "ФОП Буданов",
-                    identificationCode: "Code 1",
-                    currency: "UAH",
-                    amount: 100,
-                    phoneNumber: "0501234567",
-                    serviceType: "Послуги розвідки",
-                },
-                {
-                    id: "3",
-                    companyName: "ФОП Буданов",
-                    identificationCode: "Code 1",
-                    currency: "UAH",
-                    amount: 100,
-                    phoneNumber: "0501234567",
-                    serviceType: "Послуги розвідки",
-                }
-            ]);
+            setOffers(OfferDatabase.shared.load());
         };
 
         fetchOffers();
