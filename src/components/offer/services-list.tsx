@@ -28,10 +28,14 @@ export function ServicesList({ services }: ServicesListProps) {
                                 <Label14 text="Смарт контракт"></Label14>
                             </div>
                             <img src="../info.svg" alt='info' style={{ marginRight: '1.5ch' }}></img>
-                            <a href={service.address} style={{ marginRight: '0.5ch' }}>
+                            <div onClick={() => navigator.clipboard.writeText(service.address)} style={{ marginRight: 'auto' }} >
+                            <HStack>
+                            <p style={{ marginRight: '0.5ch' }}>
                                 <Label14 text={service.address} />
-                            </a>
-                            <img src="../copy.svg" style={{ marginRight: 'auto' }}></img>
+                            </p>
+                            <img src="../copy.svg"></img>
+                            </HStack>
+                            </div>
                             <div style={{background: '#E0F2FE', borderRadius: '1ch', paddingTop: '0.5ch', paddingLeft: '1ch', paddingRight: '1ch', paddingBottom: '0.5ch', marginRight: '1ch'}}>
                                 <HStack>
                                     <div style={{ color: '#6B7280' }}>
