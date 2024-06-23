@@ -8,6 +8,7 @@ import ChooseRole from './views/choose-role';
 import AuthoriseDiia from './views/authorise-diia';
 import Home from "./views/home";
 import Mint from './views/mint';
+import MyAccounts from './views/my-accounts';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="choose-role" element={<ChooseRole/>}/>
                 <Route path="authorise-diia" element={<AuthoriseDiia/>}/>
                 <Route path="mint" element={<Mint/>}/>
+                <Route path="my-accounts" element={<MyAccounts/>}/>
             </Routes>
         </Router>
     );
