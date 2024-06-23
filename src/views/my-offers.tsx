@@ -30,7 +30,7 @@ const MyOffers = () => {
                     <div onClick={ () => navigate('create-offer') } style={{marginRight: '1ch'}}>
                     <ButtonSmall>
                         <div style={{color: 'white'}}>
-                        <Label16Bold text='Create offer' />
+                        <Label16Bold text='Create service' />
                         </div>
                     </ButtonSmall>
                     </div>

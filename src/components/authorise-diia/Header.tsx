@@ -23,7 +23,7 @@ export function Header() {
           letterSpacing: '0.15px',
           wordWrap: 'break-word'
         }}>
-          Авторизація
+          Authorize
         </div>
         <button style={{backgroundColor: 'white', border: '0'}}>
           <img src="close.svg" alt="buttonpng" />

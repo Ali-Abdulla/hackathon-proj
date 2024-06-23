@@ -21,8 +21,8 @@ const Mint: React.FC = () => {
               <img src="../service-image.png" style={{ width: '6ch', height: '6ch', marginRight: '1ch' }}></img>
               <div style={{ marginRight: 'auto' }}>
                 <Stack gap={1.5}>
-                  <Label18 text="Детективні послуги" />
-                  <Label14 text="Маю великий досвід в розвідці" />
+                  <Label18 text="Detective services" />
+                  <Label14 text="I have a great experience in the investigation" />
                 </Stack>
               </div>
               {
@@ -48,8 +48,8 @@ const Mint: React.FC = () => {
               <img src="../service-image.png" style={{ width: '6ch', height: '6ch', marginRight: '1ch' }}></img>
               <div style={{ marginRight: 'auto' }}>
                 <Stack gap={1.5}>
-                  <Label18 text="Детективні послуги" />
-                  <Label14 text="Маю великий досвід в розвідці" />
+                  <Label18 text="Detective services" />
+                  <Label14 text="I have a great experience in the investigation" />
                 </Stack>
               </div>
               {
