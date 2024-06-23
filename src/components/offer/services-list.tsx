@@ -25,7 +25,7 @@ export function ServicesList({ services }: ServicesListProps) {
                         </HStack>
                         <HStack>
                             <div style={{ color: '#6B7280', marginRight: '0.5ch' }}>
-                                <Label14 text="Смарт контракт"></Label14>
+                                <Label14 text="Smart contract"></Label14>
                             </div>
                             <img src="../info.svg" alt='info' style={{ marginRight: '1.5ch' }}></img>
                             <div onClick={() => navigator.clipboard.writeText(service.address)} style={{ marginRight: 'auto' }} >
@@ -39,17 +39,17 @@ export function ServicesList({ services }: ServicesListProps) {
                             <div style={{background: '#E0F2FE', borderRadius: '1ch', paddingTop: '0.5ch', paddingLeft: '1ch', paddingRight: '1ch', paddingBottom: '0.5ch', marginRight: '1ch'}}>
                                 <HStack>
                                     <div style={{ color: '#6B7280' }}>
-                                        <Label14 text="Срок: " />
+                                        <Label14 text="Duration: " />
                                     </div>
                                     <div style={{ color: '#111827' }}>
-                                        <Label14 text="3 дні" />
+                                        <Label14 text="3 days" />
                                     </div>
                                 </HStack>
                             </div>
                             <div style={{background: '#E0F2FE', borderRadius: '1ch', paddingTop: '0.5ch', paddingLeft: '1ch', paddingRight: '1ch', paddingBottom: '0.5ch'}}>
                                 <HStack>
                                     <div style={{ color: '#6B7280' }}>
-                                        <Label14 text="Валюта: " />
+                                        <Label14 text="Currency: " />
                                     </div>
                                     <div style={{ color: '#111827' }}>
                                         <Label14 text={service.currency} />

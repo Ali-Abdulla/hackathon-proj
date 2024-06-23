@@ -34,26 +34,26 @@ const CreateOffer = () => {
                     <button onClick={() => navigate('../')} style={{backgroundColor: 'white', border: '0'}}>
                         <img src="arrow-left.svg" alt="buttonpng"/>
                     </button>
-                    <Label30 text='Створення оферти'/>
+                    <Label30 text='Create offer'/>
                 </HStack>
                 <Stack gap="1ch">
                     <div style={{marginTop: '3ch'}}>
-                        <InputLabel upperText={'Назва компанії'} labelText={'Назва компанії'}/>
+                        <InputLabel upperText={'Company name'} labelText={'Company name'}/>
                     </div>
                     <div style={{marginTop: '2ch'}}>
-                        <InputLabel upperText={'Ідентифікаційний код'} labelText={'1111111111'}/>
+                        <InputLabel upperText={'Identification code'} labelText={'1111111111'}/>
                     </div>
                     <div style={{marginTop: '2ch'}}>
-                        <InputLabel upperText={'Валюта'} labelText={'USDT'}/>
+                        <InputLabel upperText={'Currency'} labelText={'USDT'}/>
                     </div>
                     <div style={{marginTop: '2ch'}}>
-                        <InputLabel upperText={'Кількість'} labelText={'Введіть кількість токенів'}/>
+                        <InputLabel upperText={'Amount'} labelText={'Enter amount of tokens'}/>
                     </div>
                     <div style={{marginTop: '2ch'}}>
-                        <InputLabel upperText={'Телефон'} labelText={'+380 (999) 999-99-99'}/>
+                        <InputLabel upperText={'Phone number'} labelText={'+380 (999) 999-99-99'}/>
                     </div>
                     <div style={{marginTop: '2ch'}}>
-                        <InputLabel upperText={'Клас послуг'} labelText={'Перукарські послуги'}/>
+                        <InputLabel upperText={'Service type'} labelText={'Barbershop services'}/>
                     </div>
                     <button
                         onClick={() => createOfferMethod() }
@@ -70,7 +70,7 @@ const CreateOffer = () => {
                             color: 'white',
 
                         }}>
-                        <Label16 text='Створити оферту'/>
+                        <Label16 text='Create offer'/>
                     </button>
                 </Stack>
             </div>

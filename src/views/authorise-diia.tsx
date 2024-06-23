@@ -7,7 +7,7 @@ const AuthoriseDiia: React.FC = () => {
         <div className="app-background">
             <Container>
                 <Header/>
-                <Card text="Авторизуватись через" navigation=".."/>
+                <Card text="Authorize via" navigation=".."/>
             </Container>
         </div>
     );
