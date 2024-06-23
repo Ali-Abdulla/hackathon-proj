@@ -6,13 +6,15 @@ import CreateService from './views/create-service';
 import Offer from './views/offer';
 import ChooseRole from './views/choose-role';
 import AuthoriseDiia from './views/authorise-diia';
+import Home from "./views/home";
 import Mint from './views/mint';
 
 function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<MyOffers/>}/> 
+                <Route path="/" element={<Home/>}/>
+                <Route path="my-offers" element={<MyOffers/>}/>
                 <Route path="create-offer" element={<CreateOffer/>}/>
                 <Route path="create-service" element={<CreateService/>}/>
                 <Route path="offer/:id" element={<Offer/>}/>
