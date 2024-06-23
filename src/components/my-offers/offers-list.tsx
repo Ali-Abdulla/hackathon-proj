@@ -38,7 +38,7 @@ const OffersList: React.FC = () => {
                     <Stack gap={3}>
                         <HStack>
                             <div style={{ marginRight: 'auto' }}>
-                                <Label20 text="Оферта" />
+                                <Label20 text="Offer" />
                             </div>
                             <Label16Bold text="08.08.2024" />
                         </HStack>
@@ -46,7 +46,7 @@ const OffersList: React.FC = () => {
                             <Stack gap={2}>
                                 <HStack>
                                     <div style={{ marginRight: '2ch', color: '#4B5563' }}>
-                                        <Label16 text="Назва команії:" />
+                                        <Label16 text="Company name:" />
                                     </div>
                                     <div style={{ color: '#111827' }}>
                                         <Label16 text={offer.companyName} />
@@ -54,7 +54,7 @@ const OffersList: React.FC = () => {
                                 </HStack>
                                 <HStack>
                                     <div style={{ marginRight: '2ch', color: '#4B5563' }}>
-                                        <Label16 text="Клас послуг:" />
+                                        <Label16 text="Service type:" />
                                     </div>
                                     <div style={{ color: '#111827' }}>
                                         <Label16 text={offer.serviceType} />
@@ -62,13 +62,13 @@ const OffersList: React.FC = () => {
                                 </HStack>
                                 <HStack>
                                     <div style={{ marginRight: '1ch', color: '#4B5563' }}>
-                                        <Label16 text="Активні послуги:" />
+                                        <Label16 text="Active services:" />
                                     </div>
                                     <Label16 text="2" />
                                 </HStack>
                                 <HStack>
                                     <div style={{ marginRight: '1ch', color: '#4B5563' }}>
-                                        <Label16 text="Неактивні послуги:" />
+                                        <Label16 text="Inactive services:" />
                                     </div>
                                     <Label16 text="4" />
                                 </HStack>
@@ -76,7 +76,7 @@ const OffersList: React.FC = () => {
                             <div onClick={handleInnerClick} style={{ marginTop: 'auto', marginLeft: 'auto' }}>
                                 <ButtonSmall>
                                     <div style={{ color: 'white' }}>
-                                        <Label16Bold text='Створити послугу' />
+                                        <Label16Bold text='Create offer' />
                                     </div>
                                 </ButtonSmall>
                             </div>

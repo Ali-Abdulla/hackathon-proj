@@ -16,27 +16,27 @@ const CreateService = () => {
                     <button onClick={() => navigate('../')} style={{backgroundColor: 'white', border: '0'}}>
                         <img src="arrow-left.svg" alt="buttonpng"/>
                     </button>
-                    <Label30 text='Створення послуги'/>
+                    <Label30 text='Create service'/>
                 </HStack>
                 <Stack gap="1ch">
                     <div style={{marginTop: '3ch'}}>
-                        <InputLabel upperText={'Назва послуги'} labelText={'Детективні послуги'}/>
+                        <InputLabel upperText={'Service name'} labelText={'Detective services'}/>
                     </div>
                     <div style={{marginTop: '2ch'}}>
-                        <InputLabel upperText={'Опис'} labelText={'Детективні послуги'}/>
+                        <InputLabel upperText={'Description'} labelText={'Detective services'}/>
                     </div>
                     <div style={{marginTop: '2ch'}}>
-                        <InputLabel upperText={'Валюта'} labelText={'USDT'}/>
+                        <InputLabel upperText={'Currency'} labelText={'USDT'}/>
                     </div>
                     <div style={{marginTop: '2ch'}}>
-                        <InputLabel upperText={'Кількість'} labelText={'Введіть кількість токенів'}/>
+                        <InputLabel upperText={'Amount'} labelText={'Enter amount of tokens'}/>
                     </div>
                     <div style={{marginTop: '2ch'}}>
-                        <InputLabel upperText={'Строк (надання послуги після карбування токену)'}
-                                    labelText={'Виберіть строк'}/>
+                        <InputLabel upperText={'Duration (after token is minted)'}
+                                    labelText={'Select Duration'}/>
                     </div>
                     <div style={{marginTop: '2ch'}}>
-                        <InputLabel upperText={'Додати фото'} labelText={'Додати фото'}/>
+                        <InputLabel upperText={'Add photo'} labelText={'Add photo'}/>
                     </div>
                     <button
                         onClick={() => navigate('../')}
@@ -53,7 +53,7 @@ const CreateService = () => {
                             color: 'white',
 
                         }}>
-                        <Label16 text='Створити послугу'/>
+                        <Label16 text='Create service'/>
                     </button>
                 </Stack>
             </div>

@@ -17,7 +17,7 @@ export function OfferHeader({ offer, services }: OfferHeaderProps) {
             <Stack gap={2}>
                 <HStack>
                     <div style={{ marginRight: '2ch', color: '#4B5563' }}>
-                        <Label16 text="Назва команії:" />
+                        <Label16 text="Company name:" />
                     </div>
                     <div style={{ color: '#111827' }}>
                         <Label16 text={offer.companyName} />
@@ -25,7 +25,7 @@ export function OfferHeader({ offer, services }: OfferHeaderProps) {
                 </HStack>
                 <HStack>
                     <div style={{ marginRight: '2ch', color: '#4B5563' }}>
-                        <Label16 text="Клас послуг:" />
+                        <Label16 text="Service type:" />
                     </div>
                     <div style={{ color: '#111827' }}>
                         <Label16 text={offer.serviceType} />
@@ -33,13 +33,13 @@ export function OfferHeader({ offer, services }: OfferHeaderProps) {
                 </HStack>
                 <HStack>
                     <div style={{ marginRight: '1ch', color: '#4B5563' }}>
-                        <Label16 text="Активні послуги:" />
+                        <Label16 text="Active services:" />
                     </div>
                     <Label16 text={activeServices} />
                 </HStack>
                 <HStack>
                     <div style={{ marginRight: '1ch', color: '#4B5563' }}>
-                        <Label16 text="Неактивні послуги:" />
+                        <Label16 text="Inactive services:" />
                     </div>
                     <Label16 text={inactiveServices} />
                 </HStack>

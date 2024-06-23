@@ -30,12 +30,12 @@ const Offer = () => {
             setOffer(
                 {
                     id: "1",
-                    companyName: "ФОП Буданов",
+                    companyName: "Individual Entrepreneur Budanov",
                     identificationCode: "Code 1",
                     currency: "UAH",
                     amount: 100,
                     phoneNumber: "0501234567",
-                    serviceType: "Послуги розвідки",
+                    serviceType: "Intelligence services",
                 }
             );
         };
@@ -44,8 +44,8 @@ const Offer = () => {
             setServices([
                 {
                     id: '1',
-                    title: 'Детективні послуги',
-                    description: 'Маю великий досвід в розвідці',
+                    title: 'Detective services',
+                    description: 'I have extensive experience in intelligence services',
                     address: '0x1234567890abcdef1234567890abcdef12345678',
                     term: 3,
                     currency: '$',
@@ -53,8 +53,8 @@ const Offer = () => {
                 },
                 {
                     id: '2',
-                    title: 'Детективні послуги',
-                    description: 'Маю великий досвід в розвідці',
+                    title: 'Detective services',
+                    description: 'I have extensive experience in intelligence services',
                     address: '0x1234567890abcdef1234567890abcdef12345678',
                     term: 3,
                     currency: '$',
@@ -62,8 +62,8 @@ const Offer = () => {
                 },
                 {
                     id: '3',
-                    title: 'Детективні послуги',
-                    description: 'Маю великий досвід в розвідці',
+                    title: 'Detective services',
+                    description: 'I have extensive experience in intelligence services',
                     address: '0x1234567890abcdef1234567890abcdef12345678',
                     term: 3,
                     currency: '$',
@@ -71,8 +71,8 @@ const Offer = () => {
                 },
                 {
                     id: '4',
-                    title: 'Детективні послуги',
-                    description: 'Маю великий досвід в розвідці',
+                    title: 'Detective services',
+                    description: 'I have extensive experience in intelligence services',
                     address: '0x1234567890abcdef1234567890abcdef12345678',
                     term: 3,
                     currency: '$',
@@ -80,8 +80,8 @@ const Offer = () => {
                 },
                 {
                     id: '5',
-                    title: 'Детективні послуги',
-                    description: 'Маю великий досвід в розвідці',
+                    title: 'Detective services',
+                    description: 'I have extensive experience in intelligence services',
                     address: '0x1234567890abcdef1234567890abcdef12345678',
                     term: 3,
                     currency: '$',
@@ -89,8 +89,8 @@ const Offer = () => {
                 },
                 {
                     id: '6',
-                    title: 'Детективні послуги',
-                    description: 'Маю великий досвід в розвідці',
+                    title: 'Detective services',
+                    description: 'I have extensive experience in intelligence services',
                     address: '0x1234567890abcdef1234567890abcdef12345678',
                     term: 3,
                     currency: '$',
@@ -106,11 +106,11 @@ const Offer = () => {
     const allServicesCount = services.length;
     const activeServicesCount = services.filter(service => service.isActive).length;
     const inactiveServicesCount = services.filter(service => !service.isActive).length;
-    const allServicesText = "Всі (" + String(allServicesCount) + ")";
-    const activeServicesText = "Активні (" + String(activeServicesCount) + ")";
-    const inactiveServicesText = "Неактивні (" + String(inactiveServicesCount) + ")";
+    const allServicesText = "All (" + String(allServicesCount) + ")";
+    const activeServicesText = "Active (" + String(activeServicesCount) + ")";
+    const inactiveServicesText = "Inactive (" + String(inactiveServicesCount) + ")";
     let visibleServices: Service[] = []
-    let title = 'Список послуг ';
+    let title = 'List of services ';
     switch (serviceOption) {
         case ServiceOption.All:
             visibleServices = services;
@@ -136,7 +136,7 @@ const Offer = () => {
                     <div onClick={() => navigate("..")}>
                         <HStack>
                             <img src="../arrow-left.svg" alt="arrow-left" style={{ marginRight: '1ch' }} />
-                            <Label30 text="Оферта" />
+                            <Label30 text="Offer" />
                         </HStack>
                     </div>
                     <div style={{ background: 'white', padding: '2ch', borderRadius: '2ch' }}>
@@ -149,7 +149,7 @@ const Offer = () => {
                                     <div style={{ marginLeft: 'auto' }}>
                                         <ButtonSmall>
                                             <div onClick={() => navigate('../create-service')} style={{ color: 'white' }}>
-                                                <Label16Bold text="Створити послугу" />
+                                                <Label16Bold text="Create service" />
                                             </div>
                                         </ButtonSmall>
                                     </div>

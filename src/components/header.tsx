@@ -9,7 +9,7 @@ const Header = () => {
             </a>
             <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                 <a className="header-item">
-                    <Label16 text={"ФОП Буданов"}/>
+                    <Label16 text={"Individual Entrepreneur Budanov"}/>
                 </a>
                 <a className="header-item">
                     <img src="../face.svg" alt="face"/>
