@@ -36,7 +36,6 @@ header {
 }
 
 .app-background {
-  background-image: url('./images/background.png');
   background-size: cover;
   background-position: center;
   width: 100%;

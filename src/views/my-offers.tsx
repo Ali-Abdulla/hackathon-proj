@@ -46,6 +46,7 @@ const MyOffers = () => {
             </div>
         </div>
     )
+
 }
 
 export default MyOffers;
