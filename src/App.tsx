@@ -7,6 +7,7 @@ import Offer from './views/offer';
 import ChooseRole from './views/choose-role';
 import AuthoriseDiia from './views/authorise-diia';
 import Home from "./views/home";
+import Mint from './views/mint';
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                 <Route path="offer/:id" element={<Offer/>}/>
                 <Route path="choose-role" element={<ChooseRole/>}/>
                 <Route path="authorise-diia" element={<AuthoriseDiia/>}/>
+                <Route path="mint" element={<Mint/>}/>
             </Routes>
         </Router>
     );
