@@ -57,3 +57,11 @@ export function Label30({ text }: LabelProps) {
         </div>
     );
 }
+
+export function Label48({ text }: LabelProps) {
+    return (
+        <div className="label48">
+            {text}
+        </div>
+    );
+}

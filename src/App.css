@@ -141,6 +141,14 @@ header {
   word-wrap: break-word;
 }
 
+.label48 {
+  font-size: 60px;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  line-height: 64px;
+  word-wrap: break-word;
+}
+
 /* Buttons */
 
 .button-small {
