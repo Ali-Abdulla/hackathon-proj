@@ -27,7 +27,7 @@ const MyOffers = () => {
                         </div>
                     </ButtonSmall>
                     </div>
-                    <div onClick={ () => navigate('create-offer') } style={{marginRight: '1ch'}}>
+                    <div onClick={ () => navigate('../' + 'create-offer') } style={{marginRight: '1ch'}}>
                     <ButtonSmall>
                         <div style={{color: 'white'}}>
                         <Label16Bold text='Create offer' />
