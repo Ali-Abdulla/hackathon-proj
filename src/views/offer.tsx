@@ -9,6 +9,8 @@ import OfferEntity from '../types/offer';
 import Service from '../types/service';
 import { ButtonSmall } from '../components/buttons';
 import ServicesList from '../components/offer/services-list';
+import OfferDatabase from '../database/offer-database';
+import ServiceDatabase from '../database/service-database';
 
 enum ServiceOption {
     All,
@@ -27,76 +29,12 @@ const Offer = () => {
     useEffect(() => {
         // Fetch the items from the API
         const fetchOffer = async () => {
-            setOffer(
-                {
-                    id: "1",
-                    companyName: "Individual Entrepreneur Budanov",
-                    identificationCode: "Code 1",
-                    currency: "UAH",
-                    amount: 100,
-                    phoneNumber: "0501234567",
-                    serviceType: "Intelligence services",
-                }
-            );
+            const offer = OfferDatabase.shared.load().filter(offer => offer.id == id)[0]
+            setOffer(offer);
         };
 
         const fetchServices = async () => {
-            setServices([
-                {
-                    id: '1',
-                    title: 'Detective services',
-                    description: 'I have extensive experience in intelligence services',
-                    address: '0x1234567890abcdef1234567890abcdef12345678',
-                    term: 3,
-                    currency: '$',
-                    isActive: true
-                },
-                {
-                    id: '2',
-                    title: 'Detective services',
-                    description: 'I have extensive experience in intelligence services',
-                    address: '0x1234567890abcdef1234567890abcdef12345678',
-                    term: 3,
-                    currency: '$',
-                    isActive: true
-                },
-                {
-                    id: '3',
-                    title: 'Detective services',
-                    description: 'I have extensive experience in intelligence services',
-                    address: '0x1234567890abcdef1234567890abcdef12345678',
-                    term: 3,
-                    currency: '$',
-                    isActive: false
-                },
-                {
-                    id: '4',
-                    title: 'Detective services',
-                    description: 'I have extensive experience in intelligence services',
-                    address: '0x1234567890abcdef1234567890abcdef12345678',
-                    term: 3,
-                    currency: '$',
-                    isActive: false
-                },
-                {
-                    id: '5',
-                    title: 'Detective services',
-                    description: 'I have extensive experience in intelligence services',
-                    address: '0x1234567890abcdef1234567890abcdef12345678',
-                    term: 3,
-                    currency: '$',
-                    isActive: false
-                },
-                {
-                    id: '6',
-                    title: 'Detective services',
-                    description: 'I have extensive experience in intelligence services',
-                    address: '0x1234567890abcdef1234567890abcdef12345678',
-                    term: 3,
-                    currency: '$',
-                    isActive: false
-                }
-            ]);
+            setServices(ServiceDatabase.shared.load());
         };
 
         fetchOffer();

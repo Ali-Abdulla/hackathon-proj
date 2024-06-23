@@ -7,11 +7,12 @@ class OfferDatabase {
     static shared = new OfferDatabase();
 
     save(offers: OfferEntity[]) {
-        this.offers = offers;
+        localStorage.setItem("offers", JSON.stringify(offers));
     }
 
     load(): OfferEntity[] {
-        return this.offers
+        const offers = localStorage.getItem("offers");
+        return offers ? JSON.parse(offers) : [];
     }
 }
 

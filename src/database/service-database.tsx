@@ -2,14 +2,17 @@ import Service from "../types/service";
 import fs from 'fs';
 
 class ServiceDatabase {
-    static save(services: Service[]) {
-        const json = JSON.stringify(services, null, 2);
-        fs.writeFileSync('services.json', json, 'utf8');
+    offers: Service[] = [];
+
+    static shared = new ServiceDatabase();
+
+    save(services: Service[]) {
+        localStorage.setItem("services", JSON.stringify(services));
     }
 
-    static load(): Service[] {
-        const json = fs.readFileSync('services.json', 'utf8');
-        return JSON.parse(json);
+    load(): Service[] {
+        const services = localStorage.getItem("services");
+        return services ? JSON.parse(services) : [];
     }
 }
 

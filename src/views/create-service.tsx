@@ -4,9 +4,27 @@ import {Label30, Label16} from "../components/labels";
 import InputLabel from "../components/create-offer/input-label";
 import {useNavigate} from "react-router-dom";
 import {Stack} from "@mui/material";
+import ServiceDatabase from '../database/service-database';
+import Service from '../types/service';
 
 const CreateService = () => {
     const navigate = useNavigate();
+
+    const createServiceMethod = async () => {
+        let services = ServiceDatabase.shared.load();
+        const newService: Service = {
+            id: "1",
+            title: "Title",
+            description: "Description",
+            address: "0x123",
+            term: 3,
+            currency: "$",
+            isActive: false
+        };
+        services.push(newService);
+        ServiceDatabase.shared.save(services);
+        navigate('../')
+    }
 
     return (
         <div>
@@ -39,7 +57,7 @@ const CreateService = () => {
                         <InputLabel upperText={'Add photo'} labelText={'Add photo'}/>
                     </div>
                     <button
-                        onClick={() => navigate('../')}
+                        onClick={createServiceMethod}
                         style={{
                             backgroundColor: '#1D4ED8',
                             borderWidth: '1px',
