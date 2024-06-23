@@ -8,6 +8,10 @@ import OffersList from '../components/my-offers/offers-list';
 const MyOffers = () => {
     const navigate = useNavigate();
 
+    const handleDeploy = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        // Deploy
+    };
+
     return (
         <div style={{background: '#F9FAFB'}}>
             <Header />
@@ -15,6 +19,13 @@ const MyOffers = () => {
                 <HStack>
                     <div style={{ marginRight: 'auto' }}>
                         <Label30 text='Мої оферти' />
+                    </div>
+                    <div onClick={handleDeploy} style={{marginRight: '1ch'}}>
+                    <ButtonSmall>
+                        <div style={{color: 'white'}}>
+                        <Label16Bold text='Задеплоїти смартконтракт' />
+                        </div>
+                    </ButtonSmall>
                     </div>
                     <div onClick={ () => navigate('create-offer') } style={{marginRight: '1ch'}}>
                     <ButtonSmall>
