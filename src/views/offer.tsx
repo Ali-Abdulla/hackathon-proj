@@ -4,7 +4,7 @@ import { HStack } from '../components/HStack';
 import { Label14, Label16Bold, Label24, Label30 } from '../components/labels';
 import { Stack } from '@mui/material';
 import OfferHeader from '../components/offer/offer-header';
-import { useEffect, useState } from 'react';
+import { act, useEffect, useState } from 'react';
 import OfferEntity from '../types/offer';
 import Service from '../types/service';
 import { ButtonSmall } from '../components/buttons';
@@ -22,7 +22,6 @@ const Offer = () => {
 
     const [offer, setOffer] = useState<OfferEntity | undefined>(undefined);
     const [services, setServices] = useState<Service[]>([]);
-    const [servicesTitle, setServicesTitle] = useState<string>('');
     const [serviceOption, setServiceOption] = useState<ServiceOption>(ServiceOption.All);
 
     useEffect(() => {
@@ -98,32 +97,58 @@ const Offer = () => {
                     isActive: false
                 }
             ]);
-            setServicesTitle('Список послуг (2/4)');
         };
 
         fetchOffer();
         fetchServices();
     }, []);
 
+    const allServicesCount = services.length;
+    const activeServicesCount = services.filter(service => service.isActive).length;
+    const inactiveServicesCount = services.filter(service => !service.isActive).length;
+    const allServicesText = "Всі (" + String(allServicesCount) + ")";
+    const activeServicesText = "Активні (" + String(activeServicesCount) + ")";
+    const inactiveServicesText = "Неактивні (" + String(inactiveServicesCount) + ")";
+    let visibleServices: Service[] = []
+    let title = 'Список послуг ';
+    switch (serviceOption) {
+        case ServiceOption.All:
+            visibleServices = services;
+            title += '(' + String(allServicesCount) + "/" + String(allServicesCount) + ")";
+            break;
+
+        case ServiceOption.Active:
+            visibleServices = services.filter(service => service.isActive);
+            title += '(' + String(activeServicesCount) + "/" + String(allServicesCount) + ")";
+            break;
+
+        case ServiceOption.Inactive:
+            visibleServices = services.filter(service => !service.isActive);
+            title += '(' + String(inactiveServicesCount) + "/" + String(allServicesCount) + ")";
+            break;
+    }
+
     return (
         <div style={{ background: '#F9FAFB' }}>
             <Header />
             <div style={{ marginTop: '3ch', marginLeft: '15ch', marginRight: '15ch', marginBottom: '3ch' }}>
                 <Stack gap={3}>
-                    <HStack>
-                        <img src="../arrow-left.svg" alt="arrow-left" style={{ marginRight: '1ch' }} />
-                        <Label30 text="Оферта" />
-                    </HStack>
+                    <div onClick={() => navigate("..")}>
+                        <HStack>
+                            <img src="../arrow-left.svg" alt="arrow-left" style={{ marginRight: '1ch' }} />
+                            <Label30 text="Оферта" />
+                        </HStack>
+                    </div>
                     <div style={{ background: 'white', padding: '2ch', borderRadius: '2ch' }}>
                         <Stack gap={3}>
-                            <OfferHeader offer={offer} />
+                            <OfferHeader offer={offer} services={services} />
                             <div style={{ background: '#D1D5DB', height: '1px' }}></div>
                             <Stack gap={2}>
                                 <HStack>
-                                    <Label24 text={servicesTitle} />
+                                    <Label24 text={title} />
                                     <div style={{ marginLeft: 'auto' }}>
                                         <ButtonSmall>
-                                            <div onClick={ () => navigate('../create-service') } style={{ color: 'white' }}>
+                                            <div onClick={() => navigate('../create-service')} style={{ color: 'white' }}>
                                                 <Label16Bold text="Створити послугу" />
                                             </div>
                                         </ButtonSmall>
@@ -133,35 +158,35 @@ const Offer = () => {
                                     {
                                         serviceOption === ServiceOption.All ?
                                             <div style={{ background: '#E0E7FF', borderRadius: '1ch', paddingTop: '1ch', paddingLeft: '1.5ch', paddingRight: '1.5ch', paddingBottom: '1ch' }}>
-                                                <Label14 text="Всі (6)" />
+                                                <Label14 text={allServicesText} />
                                             </div>
                                             :
-                                            <button onClick={() => setServiceOption(ServiceOption.All) } style={{ background: 'white', borderWidth: '0', paddingTop: '1ch', paddingLeft: '1.5ch', paddingRight: '1.5ch', paddingBottom: '1ch' }}>
-                                                <Label14 text="Всі (6)" />
+                                            <button onClick={() => setServiceOption(ServiceOption.All)} style={{ background: 'white', borderWidth: '0', paddingTop: '1ch', paddingLeft: '1.5ch', paddingRight: '1.5ch', paddingBottom: '1ch' }}>
+                                                <Label14 text={allServicesText} />
                                             </button>
                                     }
                                     {
                                         serviceOption === ServiceOption.Active ?
                                             <div style={{ background: '#E0E7FF', borderRadius: '1ch', paddingTop: '1ch', paddingLeft: '1.5ch', paddingRight: '1.5ch', paddingBottom: '1ch' }}>
-                                                <Label14 text="Активні (6)" />
+                                                <Label14 text={activeServicesText} />
                                             </div>
                                             :
-                                            <button onClick={() => setServiceOption(ServiceOption.Active) } style={{ background: 'white', borderWidth: '0', paddingTop: '1ch', paddingLeft: '1.5ch', paddingRight: '1.5ch', paddingBottom: '1ch' }}>
-                                                <Label14 text="Активні (6)" />
+                                            <button onClick={() => setServiceOption(ServiceOption.Active)} style={{ background: 'white', borderWidth: '0', paddingTop: '1ch', paddingLeft: '1.5ch', paddingRight: '1.5ch', paddingBottom: '1ch' }}>
+                                                <Label14 text={activeServicesText} />
                                             </button>
                                     }
                                     {
                                         serviceOption === ServiceOption.Inactive ?
                                             <div style={{ background: '#E0E7FF', borderRadius: '1ch', paddingTop: '1ch', paddingLeft: '1.5ch', paddingRight: '1.5ch', paddingBottom: '1ch' }}>
-                                                <Label14 text="Неактивні (6)" />
+                                                <Label14 text={inactiveServicesText} />
                                             </div>
                                             :
-                                            <button onClick={() => setServiceOption(ServiceOption.Inactive) } style={{ background: 'white', borderWidth: '0', paddingTop: '1ch', paddingLeft: '1.5ch', paddingRight: '1.5ch', paddingBottom: '1ch' }}>
-                                                <Label14 text="Неактивні (6)" />
+                                            <button onClick={() => setServiceOption(ServiceOption.Inactive)} style={{ background: 'white', borderWidth: '0', paddingTop: '1ch', paddingLeft: '1.5ch', paddingRight: '1.5ch', paddingBottom: '1ch' }}>
+                                                <Label14 text={inactiveServicesText} />
                                             </button>
                                     }
                                 </HStack>
-                                <ServicesList services={services} />
+                                <ServicesList services={visibleServices} />
                             </Stack>
                         </Stack>
                     </div>
